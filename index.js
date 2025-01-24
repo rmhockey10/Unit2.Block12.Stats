@@ -13,14 +13,14 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   let i = 0;
-  let a = 0;
-  let b = 0;
+  let j = 0;
+  let k = 0;
   while (i < numbers.length) {
-    let a = numbers[i];
-    b = a + b;
+    let j = numbers[i];
+    k = j + k;
     i = i + 1;
   }
-  const getSum = b;
+  const getSum = k;
   return getSum;
 }
 
@@ -29,16 +29,7 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  let i = 0;
-  let a = 0;
-  let b = 0;
-  while (i < numbers.length) {
-    let a = numbers[i];
-    b = a + b;
-    i = i + 1;
-  }
-  const getSum = b;
-  const getMean = getSum / i;
+  const getMean = getSum(numbers) / numbers.length;
   return getMean;
 }
 
@@ -47,7 +38,18 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  const getMin = Math.min(...numbers);
+  // const getMin = Math.min(...numbers);
+  // return getMin;
+  let i = 0;
+  let getMin = numbers[0];
+  while (i < numbers.length) {
+    if (numbers[i] < getMin) {
+      let getMin = numbers[i];
+      i = i + 1;
+    } else {
+      i = i + 1;
+    }
+  }
   return getMin;
 }
 
@@ -65,7 +67,7 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  const getRange = Math.max(...numbers) - Math.min(...numbers);
+  const getRange = getMax(numbers) - getMin(numbers);
   return getRange;
 }
 
