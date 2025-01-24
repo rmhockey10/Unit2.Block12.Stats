@@ -3,7 +3,8 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  const getLength = numbers.length;
+  return getLength;
 }
 
 /**
@@ -11,7 +12,16 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let i = 0;
+  let a = 0;
+  let b = 0;
+  while (i < numbers.length) {
+    let a = numbers[i];
+    b = a + b;
+    i = i + 1;
+  }
+  const getSum = b;
+  return getSum;
 }
 
 /**
@@ -19,7 +29,17 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  let i = 0;
+  let a = 0;
+  let b = 0;
+  while (i < numbers.length) {
+    let a = numbers[i];
+    b = a + b;
+    i = i + 1;
+  }
+  const getSum = b;
+  const getMean = getSum / i;
+  return getMean;
 }
 
 /**
@@ -27,7 +47,8 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  const getMin = Math.min(...numbers);
+  return getMin;
 }
 
 /**
@@ -35,7 +56,8 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  const getMax = Math.max(...numbers);
+  return getMax;
 }
 
 /**
@@ -43,7 +65,8 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  const getRange = Math.max(...numbers) - Math.min(...numbers);
+  return getRange;
 }
 
 /**
@@ -51,15 +74,34 @@ function getRange(numbers) {
  * @returns {number[]} the even numbers in the array
  */
 function getEvens(numbers) {
-  // TODO
+  const getEvens = [];
+  let i = 0;
+  while (i < numbers.length) {
+    if (numbers[i] % 2 === 0) {
+      getEvens.push(numbers[i]);
+      i = i + 1;
+    } else {
+      i = i + 1;
+    }
+  }
+  return getEvens;
 }
-
 /**
  * @param {number[]} numbers an array of integers
  * @returns {number[]} the odd numbers in the array
  */
 function getOdds(numbers) {
-  // TODO
+  const getOdds = [];
+  let i = 0;
+  while (i < numbers.length) {
+    if (numbers[i] % 2 !== 0) {
+      getOdds.push(numbers[i]);
+      i = i + 1;
+    } else {
+      i = i + 1;
+    }
+  }
+  return getOdds;
 }
 
 // === READ BUT DO NOT EDIT THE CODE BELOW ===
